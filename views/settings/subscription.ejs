@@ -12,6 +12,32 @@
 
   <div class="bg-white py-6 sm:py-8 lg:py-12">
     <div class="mx-auto max-w-screen-lg px-4 md:px-8">
+
+      <div>
+        <% if (subs.length > 0) { %>
+        <div class="grid">
+          <% for (let subscription of subs) { %>
+          <article class="card subscription-item">
+            <header class="card__header">
+              <h1 class="subscription__title"><%= subscription.id %></h1>
+            </header>
+            <p class="subscription__description"><%= subscription.plan_id %></p>
+            <p class="subscription__description"><%= subscription.dueDate %></p>
+            <p class="subscription__description"><%= subscription.cancellation_date %></p>
+            <p class="subscription__description"><%= subscription.user_id %></p>
+            <p class="subscription__description"><%= subscription.created %></p>
+            <p class="subscription__description"><%= subscription.modified %></p>
+
+
+          </article>
+          <% } %>
+        </div>
+        <% } else { %>
+        <h1>Sem Assinatura</h1>
+        <% } %>
+      </div>
+
+
       <!-- text - start -->
       <div class="mb-10 md:mb-16">
         <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Comece a avaliar hoje, escolha o seu plano depois</h2>
@@ -139,7 +165,7 @@
 
           <a href="#" class="block rounded-lg bg-indigo-200 bg-opacity-50 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-300 focus-visible:ring active:bg-indigo-400 md:text-base">Assinar goldmap PRO</a>
         </div>
-        <!-- right side - end -->
+        right side - end
       </div>
     </div>
   </div>

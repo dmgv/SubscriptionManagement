@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "plan_id": "1",
+    "dueDate": "2024-02-29",
+    "cancellation_date": null,
+    "user_id": "1",
+    "created": "2024-02-01",
+    "modified": "2024-02-10"
+  }
+]

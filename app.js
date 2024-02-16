@@ -24,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-
 // Importando o controlador para erros 404.
 const errorController = require('./controllers/error');
 
