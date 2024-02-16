@@ -1,0 +1,74 @@
+<%- include('../includes/head.ejs') %>
+
+<!-- <link rel="stylesheet" href="/css/product.css"> -->
+
+</head>
+
+<body>
+
+  <%- include('../includes/navigation.ejs') %>
+
+  <main>
+    <% if (prods.length> 0) { %>
+    <div class="grid">
+      <% for (let product of prods) { %>
+      <article class="card product-item">
+        <header class="card__header">
+          <h1 class="product__title">
+            <%= product.title %>
+          </h1>
+        </header>
+        <div class="card__image">
+          <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+        </div>
+        <div class="card__content">
+          <h2 class="product__price">$<%= product.price %>
+          </h2>
+          <p class="product__description">
+            <%= product.description %>
+          </p>
+        </div>
+        <div class="card__actions">
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+      <% } %>
+    </div>
+    <% } else { %>
+
+    <section class="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
+      <!-- image - start -->
+      <img src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500" loading="lazy" alt="Photo by Fakurian Design" class="absolute inset-0 h-full w-full object-cover object-center" />
+      <!-- image - end -->
+
+      <!-- overlay - start -->
+      <div class="absolute inset-0 bg-amber-300 mix-blend-multiply"></div>
+      <!-- overlay - end -->
+
+      <!-- text start -->
+      <div class="relative flex flex-col items-center p-4 sm:max-w-xl">
+        <p class="mb-4 text-center text-lg text-slate-600 sm:text-xl md:mb-8">Planejamento de orçamentos</p>
+        <h1 class="mb-8 text-center text-4xl font-bold text-slate-900 sm:text-5xl md:mb-12 md:text-6xl">Decida para onde vai o seu dinheiro</h1>
+
+        <div class="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
+          <a href="#" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">EXPERIMENTE GRÁTIS</a>
+
+          <a href="#" class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">FUNCIONALIDADES</a>
+        </div>
+      </div>
+      <!-- text end -->
+    </section>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    </div>
+    </div>
+
+
+
+
+
+    <% } %>
+  </main>
+  <%- include('../includes/end.ejs') %>
