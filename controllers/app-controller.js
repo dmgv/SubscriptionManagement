@@ -14,6 +14,20 @@ exports.getBudgets = (req, res, next) => {
   });
 };
 
+exports.getBudgetsYear = (req, res, next) => {
+  res.render('app/budgets-year', {
+    path: '/app/budgets/2024',
+    pageTitle: 'Goldmap: Orçamento'
+  });
+};
+
+exports.getBudgetsMonth = (req, res, next) => {
+  res.render('app/budgets-month', {
+    path: '/app/budgets/2024/02',
+    pageTitle: 'Goldmap: Orçamento'
+  });
+};
+
 exports.getBalances = (req, res, next) => {
   res.render('app/balances', {
     path: '/app/balances',
