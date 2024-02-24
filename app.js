@@ -37,6 +37,7 @@ liveReloadServer.server.once("connection", () => {
 const errorController = require('./controllers/error');
 
 const appRoutes = require('./routes/app-router');
+const siteRoutes = require('./routes/site-router');
 
 // Importando as rotas de settings
 const settingsRoutes = require('./routes/settings');
@@ -44,7 +45,8 @@ const settingsRoutes = require('./routes/settings');
 app.use(connectLiveReload());
 
 // Definindo as rotas para o caminho raiz '/' usando as rotas definidas no shopRoutes.
-app.use(settingsRoutes);
+// app.use(settingsRoutes);
+app.use(siteRoutes);
 
 app.use('/app', appRoutes)
 
