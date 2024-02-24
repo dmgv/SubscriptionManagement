@@ -1,4 +1,4 @@
-const Subscription = require('../models/settings');
+const Subscription = require('../models/subscriptions');
 
 exports.getIndex = (req, res, next) => {
   // Settings.fetchAll(settings => {
