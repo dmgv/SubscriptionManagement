@@ -1,0 +1,51 @@
+<!-- ! NAVBAR-->
+<nav class="sticky top-0 z-10 block w-full max-w-full px-4 py-2 text-white bg-white border rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+
+  <div class="flex text-slate-950">
+    <!-- ? LOGO -->
+    <a href="index.html" class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-bold leading-relaxed text-inherit antialiased">
+      GOLDMAP
+    </a>
+    <!-- ? LEFT NAV -->
+    <div class="flex items-center gap-4 ml-4">
+      <div class="hidden mr-4 lg:block">
+        <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+          <li class="block p-1 font-sans text-sm antialiased <%= path === '/app/dashboards' ? 'font-bold' : 'font-normal' %> leading-normal text-blue-gray-900">
+            <a href="/app/dashboards" class="flex items-center">
+              Painel
+            </a>
+          </li>
+          <li class="block p-1 font-sans text-sm antialiased <%= path === '/app/budgets' ? 'font-bold' : 'font-normal' %> leading-normal text-blue-gray-900">
+            <a href="/app/budgets" class="flex items-center">
+              Orçamentos
+            </a>
+          </li>
+          <li class="block p-1 font-sans text-sm antialiased <%= path === 'app/balances' ? 'font-bold' : 'font-normal' %> leading-normal text-blue-gray-900">
+            <a href="app/balances" class="flex items-center">
+              Saldos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ? RIGHT NAV -->
+    <div class="flex items-center gap-4 ml-4 ml-[auto]">
+      <div class="hidden mr-4 lg:block">
+        <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+          <li class="block p-1 font-sans text-sm antialiased <%= path === '/app/preferences' ? 'font-bold' : 'font-normal' %> leading-normal text-blue-gray-900">
+            <a href="/app/preferences" class="flex items-center">
+              Preferências
+            </a>
+          </li>
+          <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+            <a href="/" class="flex items-center">
+              Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ? RIGHT NAV -->
+  </div>
+</nav>
+<!-- ! END NAVBAR -->
