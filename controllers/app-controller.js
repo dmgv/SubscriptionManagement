@@ -41,3 +41,10 @@ exports.getPreferences = (req, res, next) => {
     pageTitle: 'Goldmap: Preferências'
   });
 };
+
+exports.getPreferencesProfile = (req, res, next) => {
+  res.render('app/preferences-profile', {
+    path: '/app/preferences/profile',
+    pageTitle: 'Goldmap: Preferências'
+  });
+};

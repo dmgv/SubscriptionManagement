@@ -24,4 +24,7 @@ router.get('/balances', appController.getBalances);
 // /app/preferences => GET
 router.get('/preferences', appController.getPreferences);
 
+// /app/preferences => GET
+router.get('/preferences/profile', appController.getPreferencesProfile);
+
 module.exports = router;
