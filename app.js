@@ -36,6 +36,8 @@ liveReloadServer.server.once("connection", () => {
 // Importando o controlador para erros 404.
 const errorController = require('./controllers/error');
 
+const appRoutes = require('./routes/app-router');
+
 // Importando as rotas de settings
 const settingsRoutes = require('./routes/settings');
 
@@ -43,6 +45,8 @@ app.use(connectLiveReload());
 
 // Definindo as rotas para o caminho raiz '/' usando as rotas definidas no shopRoutes.
 app.use(settingsRoutes);
+
+app.use('/app', appRoutes)
 
 // Definindo um middleware para lidar com requisições não encontradas (erro 404).
 app.use(errorController.get404);
