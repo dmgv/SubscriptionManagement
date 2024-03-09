@@ -22,15 +22,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Servindo arquivos estáticos (como CSS, imagens, etc.) do diretório 'public' usando o middleware express.static.
 app.use(express.static(path.join(__dirname, 'public')));
 
-const livereload = require("livereload");
-const connectLiveReload = require("connect-livereload");
+// const livereload = require("livereload");
+// const connectLiveReload = require("connect-livereload");
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     liveReloadServer.refresh("/");
+//   }, 100);
+// });
 
 
 // Importando o controlador para erros 404.
@@ -42,7 +42,7 @@ const siteRoutes = require('./routes/site-router');
 // Importando as rotas de settings
 const settingsRoutes = require('./routes/settings');
 
-app.use(connectLiveReload());
+// app.use(connectLiveReload());
 
 // Definindo as rotas para o caminho raiz '/' usando as rotas definidas no shopRoutes.
 // app.use(settingsRoutes);

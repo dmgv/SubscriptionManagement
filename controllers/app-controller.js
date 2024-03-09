@@ -1,4 +1,5 @@
 const App = require('../models/app-model');
+const Invoice = require('../models/invoices');
 
 exports.getDashboards = (req, res, next) => {
   res.render('app/dashboards', {
@@ -50,10 +51,13 @@ exports.getPreferencesProfile = (req, res, next) => {
 };
 
 exports.getPreferencesBilling = (req, res, next) => {
-  res.render('app/preferences-billing', {
-    path: '/app/preferences/billing',
-    pageTitle: 'Goldmap: Preferências'
-  });
+  Invoice.fetchAll(invoices => {
+    res.render('app/preferences-billing', {
+      invoices,
+      path: '/app/preferences/billing',
+      pageTitle: 'Goldmap: Preferências'
+    });
+  })
 };
 
 exports.getPreferencesNotifications = (req, res, next) => {

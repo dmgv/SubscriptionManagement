@@ -101,30 +101,20 @@
                   <td class="text-center font-semibold"></td>
                 </thead>
                 <tbody>
+                  <% if (invoices.length > 0) { %>
+                  <% for (let invoice of invoices) { %>
                   <tr>
-                    <td class="border-b py-2 text-center text-sm">04 Fev 2024</td>
-                    <td class="border-b py-2 text-center text-sm">G-543242</td>
-                    <td class="border-b py-2 text-center text-sm">R$19,90</td>
+                    <td class="border-b py-2 text-center text-sm"><%= invoice.date %></td>
+                    <td class="border-b py-2 text-center text-sm"><%= invoice.invoiceNumber %></td>
+                    <td class="border-b py-2 text-center text-sm"><%= invoice.amount %></td>
                     <td class="border-b py-2 text-center text-sm"><button class="text-sm text-blue-600 underline">PDF</button></td>
                   </tr>
+                  <% } %>
+                  <% } else { %>
                   <tr>
-                    <td class="border-b py-2 text-center text-sm">04 Jan 2024</td>
-                    <td class="border-b py-2 text-center text-sm">G-4432342</td>
-                    <td class="border-b py-2 text-center text-sm">R$19,90</td>
-                    <td class="border-b py-2 text-center text-sm"><button class="text-sm text-blue-600 underline">PDF</button></td>
+                    <td>Nenhum recibo encontrado</td>
                   </tr>
-                  <tr>
-                    <td class="border-b py-2 text-center text-sm">04 Dez 2023</td>
-                    <td class="border-b py-2 text-center text-sm">G-4132342</td>
-                    <td class="border-b py-2 text-center text-sm">R$19,90</td>
-                    <td class="border-b py-2 text-center text-sm"><button class="text-sm text-blue-600 underline">PDF</button></td>
-                  </tr>
-                  <tr>
-                    <td class="border-b py-2 text-center text-sm">04 Nov 2023</td>
-                    <td class="border-b py-2 text-center text-sm">G-3632342</td>
-                    <td class="border-b py-2 text-center text-sm">R$19,90</td>
-                    <td class="border-b py-2 text-center text-sm"><button class="btn" onclick="my_modal_1.showModal()">Ver Detalhes</button></td>
-                  </tr>
+                  <% } %>
                 </tbody>
               </table>
             </div>
