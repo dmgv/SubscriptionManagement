@@ -22,9 +22,13 @@ router.get('/budgets/2024/02', appController.getBudgetsMonth);
 router.get('/balances', appController.getBalances);
 
 // /app/preferences => GET
-router.get('/preferences', appController.getPreferences);
+router.get('/preferences/account', appController.getPreferences);
 
 // /app/preferences => GET
 router.get('/preferences/profile', appController.getPreferencesProfile);
+
+router.get('/preferences/billing', appController.getPreferencesBilling);
+
+router.get('/preferences/notifications', appController.getPreferencesNotifications);
 
 module.exports = router;

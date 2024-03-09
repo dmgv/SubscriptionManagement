@@ -36,8 +36,8 @@ exports.getBalances = (req, res, next) => {
 };
 
 exports.getPreferences = (req, res, next) => {
-  res.render('app/preferences', {
-    path: '/app/preferences',
+  res.render('app/preferences-account', {
+    path: '/app/preferences/account',
     pageTitle: 'Goldmap: Preferências'
   });
 };
@@ -45,6 +45,20 @@ exports.getPreferences = (req, res, next) => {
 exports.getPreferencesProfile = (req, res, next) => {
   res.render('app/preferences-profile', {
     path: '/app/preferences/profile',
+    pageTitle: 'Goldmap: Preferências'
+  });
+};
+
+exports.getPreferencesBilling = (req, res, next) => {
+  res.render('app/preferences-billing', {
+    path: '/app/preferences/billing',
+    pageTitle: 'Goldmap: Preferências'
+  });
+};
+
+exports.getPreferencesNotifications = (req, res, next) => {
+  res.render('app/preferences-notifications', {
+    path: '/app/preferences/notifications',
     pageTitle: 'Goldmap: Preferências'
   });
 };
