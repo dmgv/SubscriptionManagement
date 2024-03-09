@@ -9,8 +9,11 @@ Subscription management is a simple app to learn basic nodejs and express.
 ## Todo
 
 - [ ] Subscription Model with files
+  - [ ] Persistir tipo de assinatura
+  - [ ] Excluir assinatura
 - [ ] Subscription Controller
 - [ ] Subscription Routes
-- [ ] Invoice Model with files
+- [x] Invoice Model with files
+  - [x] Criar JSON e listar
 - [ ] Invoice Controller
-- [ ] Invoice Routes
+- [x] Invoice Routes
